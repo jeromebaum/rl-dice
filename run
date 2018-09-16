@@ -1,0 +1,5 @@
+#!/bin/sh
+date | tee stdout.txt | tee stderr.txt
+python tflib.py
+python main.py >>stdout.txt 2>>stderr.txt
+echo 'done!'
